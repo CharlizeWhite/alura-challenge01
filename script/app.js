@@ -15,7 +15,7 @@ function  botonEncriptar(){
         let resultado2 = [];
         let acentos = captura.split("");
         for (let acento of acentos){
-            if(/[^a-z]/.test(acento)){
+            if(/[^a-z^\s]/.test(acento)){
                 resultado2.push(acento);
                 console.log(resultado2);
                 alert("Se han encontrado palabras con acentos, simbolos o números");
@@ -23,7 +23,7 @@ function  botonEncriptar(){
                 
             }
         }
-    let encriptar = captura.replace(/e/g,'enter').replace(/i/g,'imes').replace(/a/g,'ai').replace(/o/g,'ober').replace(/u/g,'ufat');
+    let encriptar = captura.replace(/e/g,'enter').replace(/i/g,'imes').replace(/a/g,'ai').replace(/o/g,'ober').replace(/u/g,'ufat').replace(/y/g,'imeyes');
     
     document.getElementById('desencriptar').removeAttribute('hidden');
     document.getElementById('outputText').textContent = encriptar;
