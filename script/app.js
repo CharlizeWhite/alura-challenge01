@@ -36,8 +36,8 @@ function  botonEncriptar(){
 
 function botonDesencriptar(){
     let captura = document.getElementById('inputText').value;
-    let desencriptar = captura.replace(/enter/g,'e').replace(/imes/g,'i').replace(/ai/g,'a').replace(/ober/g,'o').replace(/ufat/g,'u');
-    document.getElementById('desencriptar').removeAttribute('hidden');
+    let desencriptar = captura.replace(/enter/g,'e').replace(/imes/g,'i').replace(/ai/g,'a').replace(/ober/g,'o').replace(/ufat/g,'u').replace(/imeyes/g,'y');
+ document.getElementById('desencriptar').removeAttribute('hidden');
     document.getElementById('outputText').textContent = desencriptar;
     document.querySelector('#sinMensaje').setAttribute('hidden',true);
 }
