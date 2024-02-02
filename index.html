@@ -17,7 +17,7 @@
         <section class="seccion1">
             <div class="encriptar">
                 <label for="inputText"></label>
-                <textarea name="inputText" id="inputText" cols="40" rows="15"  placeholder="Ingresa el texto aquí"></textarea>
+                <textarea name="inputText" id="inputText" cols="40" rows="15"  placeholder="Ingresa el texto aquí" required></textarea>
                 <div class="row">
                 <i id="exclamation" class="fa-solid fa-circle-exclamation"></i><p>Solo letras minúsculas y sin acentos.</p>
                 </div>
@@ -28,7 +28,7 @@
         <section class="seccion2">
             <div class="desencriptar" id="desencriptar" hidden>
                 <label for="outputText"></label>
-                <textarea name="outputText" id="outputText" cols="40" rows="15" >
+                <textarea name="outputText" id="outputText" cols="40" rows="15" required>
                 </textarea>
                 <button id="copiarTexto" onclick="copiarTexto()">Copiar Texto</button>
             </div>

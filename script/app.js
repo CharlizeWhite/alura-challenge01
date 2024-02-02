@@ -1,19 +1,38 @@
-function  botonEncriptar(){
+function  botonEncriptar(){   
     let captura = document.getElementById('inputText').value;
     
-    function todoMinus(){
-            alert("No se permiten mayúsculas ni acentos");
-            captura = captura.toLowerCase().replace(/é/g,'e').replace(/í/g,'i').replace(/á/g,'a').replace(/ó/g,'o').replace(/ú/g,'u');
-    }
-    todoMinus();
-
+    let resultado = [];
+    let palabras = captura.split("");
+        for (let palabra of palabras){
+            if(/[A-Z]/.test(palabra)){
+                resultado.push(palabra);
+                console.log(resultado);
+                alert("Se han encontrado palabras con mayúsculas");
+                throw new Error("Se han encontrado palabras con mayúsculas");
+                
+            }
+        }
+        let resultado2 = [];
+        let acentos = captura.split("");
+        for (let acento of acentos){
+            if(/[^a-z]/.test(acento)){
+                resultado2.push(acento);
+                console.log(resultado2);
+                alert("Se han encontrado palabras con acentos, simbolos o números");
+                throw new Error("Se han encontrado palabras con acentos, símbolos o números");
+                
+            }
+        }
     let encriptar = captura.replace(/e/g,'enter').replace(/i/g,'imes').replace(/a/g,'ai').replace(/o/g,'ober').replace(/u/g,'ufat');
-
+    
     document.getElementById('desencriptar').removeAttribute('hidden');
     document.getElementById('outputText').textContent = encriptar;
-    document.querySelector('#sinMensaje').setAttribute('hidden',true);
+    document.querySelector('#sinMensaje').setAttribute('hidden',true); 
+    }
 
-}    
+
+
+    
 
 function botonDesencriptar(){
     let captura = document.getElementById('inputText').value;

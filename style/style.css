@@ -21,6 +21,7 @@ header{
 textarea {
     border-radius: 24px;
     text-align: center;
+    box-shadow: 2px 2px 15px 1px rgb(58, 108, 122);
 }
 
 
@@ -104,7 +105,7 @@ i{
     background: whitesmoke;
     width: 300px;
     height: 67;
-    margin:5px;
+    margin-top:20px;
     padding: 24px;
     border: 1px solid darkblue;
     border-radius: 24px;
