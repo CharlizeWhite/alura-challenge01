@@ -1,6 +1,6 @@
 function  botonEncriptar(){   
     let captura = document.getElementById('inputText').value;
-    
+    //Validación del texto ingresado
     let resultado = [];
     let palabras = captura.split("");
         for (let palabra of palabras){
@@ -23,11 +23,19 @@ function  botonEncriptar(){
                 
             }
         }
+    //¡Inicia Encriptación!    
     let encriptar = captura.replace(/e/g,'enter').replace(/i/g,'imes').replace(/a/g,'ai').replace(/o/g,'ober').replace(/u/g,'ufat').replace(/y/g,'imeyes');
     
     document.getElementById('desencriptar').removeAttribute('hidden');
     document.getElementById('outputText').textContent = encriptar;
     document.querySelector('#sinMensaje').setAttribute('hidden',true); 
+    document.querySelector('#imagenBusqueda').setAttribute('hidden',true);
+    document.querySelector('#imagenConLupa').setAttribute('hidden',true);
+    //Validación en caso de casilla en blanco    
+    if (captura === ""){
+            alert("Ingresa Texto a Encriptar");
+            limpiarTexto();
+    }
     }
 
 
@@ -37,9 +45,15 @@ function  botonEncriptar(){
 function botonDesencriptar(){
     let captura = document.getElementById('inputText').value;
     let desencriptar = captura.replace(/enter/g,'e').replace(/imes/g,'i').replace(/ai/g,'a').replace(/ober/g,'o').replace(/ufat/g,'u').replace(/imeyes/g,'y');
- document.getElementById('desencriptar').removeAttribute('hidden');
+    document.getElementById('desencriptar').removeAttribute('hidden');
     document.getElementById('outputText').textContent = desencriptar;
     document.querySelector('#sinMensaje').setAttribute('hidden',true);
+    document.querySelector('#imagenBusqueda').setAttribute('hidden',true);
+    document.querySelector('#imagenConLupa').setAttribute('hidden',true);
+        if (captura === ""){
+            alert("Ingresa Texto Encriptado");
+            limpiarTexto();
+        }
 }
 
 function copiarTexto(){
@@ -51,7 +65,7 @@ function copiarTexto(){
 
     navigator.clipboard.writeText(outputText.value);
 
-   // alert("Texto copiado al portapapeles: " + textoModificado);
+  
     
     limpiarTexto();
 }
@@ -61,4 +75,7 @@ function limpiarTexto(){
     document.getElementById('inputText').value='';
     document.querySelector('#desencriptar').setAttribute('hidden',true);
     document.getElementById('sinMensaje').removeAttribute('hidden');
+    document.getElementById('imagenBusqueda').removeAttribute('hidden');
+    document.getElementById('imagenConLupa').removeAttribute('hidden');
+    
 }
