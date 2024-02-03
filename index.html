@@ -17,23 +17,23 @@
         <section class="seccion1">
             <div class="encriptar">
                 <label for="inputText"></label>
-                <textarea name="inputText" id="inputText" cols="40" rows="15"  placeholder="Ingresa el texto aquí" required></textarea>
+                <textarea name="inputText" id="inputText" cols="40" rows="8"  placeholder="Ingresa el texto aquí" required></textarea>
                 <div class="row">
-                <i id="exclamation" class="fa-solid fa-circle-exclamation"></i><p>Solo letras minúsculas y sin acentos.</p>
+                    <i id="exclamation" class="fa-solid fa-circle-exclamation"></i><p>Solo letras minúsculas y sin acentos.</p>
                 </div>
                 <button id="botonEncriptar" onclick="botonEncriptar()">Encriptar</button>
                 <button id="botonDesencriptar" onclick="botonDesencriptar()">Desencriptar</button>
-                </div>
+            </div>
         </section>
         <section class="seccion2">
             <div class="desencriptar" id="desencriptar" hidden>
                 <label for="outputText"></label>
-                <textarea name="outputText" id="outputText" cols="40" rows="15" required>
+                <textarea name="outputText" id="outputText"  required>
                 </textarea>
                 <button id="copiarTexto" onclick="copiarTexto()">Copiar Texto</button>
             </div>
-            <div class="imagenBusqueda">
-                <img class="imagenConLupa" src="img/buscando-curioso-v2.gif" alt="imagen-lupa">
+            <div id="imagenBusqueda" class="imagenBusqueda">
+                <img id="imagenConLupa" class="imagenConLupa" src="img/buscando-curioso-v2.gif" alt="imagen-lupa">
             </div>    
             <div id="sinMensaje" class="mensaje">
                 <div class="mensaje1">
