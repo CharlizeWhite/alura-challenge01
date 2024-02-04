@@ -213,7 +213,7 @@ a{
         margin-right: 10px;
     }
     footer{
-        height: 45px;
+        height: 49px;
     }
 }
 @media screen and (min-width: 1440px){
@@ -267,10 +267,10 @@ a{
         font-size: 30px;
         color: darkblue;
         background: none;
-        border: 1px solid white;
-        border-radius: 15px;
-        background: rgb(239, 243, 244);
+        border: none;
+        border-radius: none;
         box-shadow: none;
+        background: rgb(239, 243, 244);
     }
     #outputText{
         border:0px;
