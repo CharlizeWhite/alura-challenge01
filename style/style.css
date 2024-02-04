@@ -213,7 +213,7 @@ a{
         margin-right: 10px;
     }
     footer{
-        height: 10vh;
+        height: 45px;
     }
 }
 @media screen and (min-width: 1440px){
@@ -270,19 +270,19 @@ a{
         border: 1px solid white;
         border-radius: 15px;
         background: rgb(239, 243, 244);
-        box-shadow: 2px 2px 15px 1px rgb(58, 108, 122);
+        box-shadow: none;
     }
     #outputText{
-        
+        border:0px;
+        width: 300px;
+        height: 500px;
         box-shadow: none;
         text-align:center; 
         font-weight: 400;
         font-size: 30px;
         color: darkblue;
         background: none;
-        border:0px;
-        width: 300px;
-        height: 500px;
+       
     }
     .imagenBusqueda{
         display: flex;
@@ -292,7 +292,7 @@ a{
     }
     footer{
         width: auto;
-        height: 8vh;
+        height: 54px;
         
     }
 }
