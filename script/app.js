@@ -13,6 +13,7 @@ function validacion(){ //Validación de espacio en blanco
                     throw new Error("Se han encontrado palabras con mayúsculas");
                 }
             }
+        
         let resultado2 = [];//Validación de acentos, simbolos o números
         let acentos = captura.split("");
             for (let acento of acentos){
@@ -25,6 +26,7 @@ function validacion(){ //Validación de espacio en blanco
             }
     }     
 }
+
 function  botonEncriptar(){   //¡Inicia Encriptación!    
     let = captura = document.getElementById('inputText').value;
     validacion(); //Inicia validación
@@ -32,12 +34,14 @@ function  botonEncriptar(){   //¡Inicia Encriptación!
     document.getElementById('outputText').textContent = encriptar;
     cambioAtributos();//Cambios en codigo HTML 
 }
+
 function cambioAtributos(){ //Cambio de atributos en etiquetas
         document.getElementById('desencriptar').removeAttribute('hidden');
         document.querySelector('#sinMensaje').setAttribute('hidden',true);
         document.querySelector('#imagenBusqueda').setAttribute('hidden',true);
         document.querySelector('#imagenConLupa').setAttribute('hidden',true);
 }
+
 function botonDesencriptar(){ //¡Inicia Desencriptación!
     let captura = document.getElementById('inputText').value;
     validacion(); //También debe tener validación
@@ -45,6 +49,7 @@ function botonDesencriptar(){ //¡Inicia Desencriptación!
     document.getElementById('outputText').textContent = desencriptar;
     cambioAtributos(); 
 }
+
 function copiarTexto(){ // Botón copiar texto
     let outputText = document.getElementById('outputText');
     outputText.select();
@@ -52,6 +57,7 @@ function copiarTexto(){ // Botón copiar texto
     navigator.clipboard.writeText(outputText.value);
     limpiarTexto();
 }
+
 function limpiarTexto(){ //Función limpiar área de texto
     document.getElementById('outputText').textContent='';
     document.getElementById('inputText').value='';
