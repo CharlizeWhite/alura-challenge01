@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <link rel="stylesheet" href="style/reset200802.css">
+    <!-- <link rel="stylesheet" href="style/reset200802.css"> -->
     <link rel="stylesheet" href="style/style.css">
-    <script src="https://kit.fontawesome.com/7d3521b1dd.js" crossorigin="anonymous"></script>
+     <script src="https://kit.fontawesome.com/7d3521b1dd.js" crossorigin="anonymous"></script>
     <title> -- Encriptador -- Challenge 1 -- ONE - Alura -Grupo 6 --</title>
 </head>
 <body>
@@ -16,9 +16,10 @@
         <section class="seccion1">
             <div class="encriptar">
                 <label for="inputText"></label>
-                <textarea name="inputText" id="inputText" cols="40" rows="6"  placeholder="Ingresa el texto aquí" required ></textarea>
+                <textarea name="inputText" class="inputText" id="inputText"  placeholder="Ingresa el texto aquí" required ></textarea>
                 <div class="row">
-                    <i id="exclamation" class="fa-solid fa-circle-exclamation"></i><p>Solo letras minúsculas y sin acentos.</p>
+                    <i id="exclamation" class="fa-solid fa-circle-exclamation"></i>
+                    <p>Solo letras minúsculas y sin acentos.</p>
                 </div>
                 <button id="botonEncriptar" onclick="botonEncriptar()">Encriptar</button>
                 <button id="botonDesencriptar" onclick="botonDesencriptar()">Desencriptar</button>
@@ -34,7 +35,7 @@
             <div id="imagenBusqueda" class="imagenBusqueda">
                 <img id="imagenConLupa" class="imagenConLupa" src="img/buscando-curioso-v2.gif" alt="imagen-lupa">
             </div>    
-            <div id="sinMensaje" class="mensaje">
+            <div class="mensaje" id="sinMensaje" >
                 <div class="mensaje1">
                     <p>Ningún mensaje fue encontrado</p>
                 </div>
